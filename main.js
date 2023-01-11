@@ -29,12 +29,13 @@ document.addEventListener('DOMContentLoaded',() => {
     function moveRight(){
         for(let x=0; x < 4; x++){
             for(let y=3; y >= 0; y--){
-                let t = squares[x*4 + y].innerHTML;
-                if(t != 0){
+                let t = parseInt(squares[x*4 + y].innerHTML);
+                if(t !== 0){
+                    let flag = 1;
+                    let m = parseInt(squares[x*4 + i].innerHTML);
                     for(let i=y+1; i < 4; i++){
-                        let flag = 1;
-                        if(squares[x*4 + i].innerHTML !== 0){
-                            if(squares[x*4 + i].innerHTML !== t){
+                        if(m !== 0){
+                            if(m !== t){
                                 if(i !== y+1){
                                     squares[x*4 + i-1].innerHTML = t;
                                     squares[x*4 + y].innerHTML = 0;
@@ -44,10 +45,10 @@ document.addEventListener('DOMContentLoaded',() => {
                             }
                             flag = 0;
                         }
-                        if(flag){
-                            squares[x*4 + 3].innerHTML = t;
-                            squares[x*4 + y].innerHTML = 0;
-                        }
+                    }
+                    if(flag && y!==3){
+                        squares[x*4 + 3].innerHTML = t;
+                        squares[x*4 + y].innerHTML = 0;
                     }
                 }
             }
@@ -56,9 +57,9 @@ document.addEventListener('DOMContentLoaded',() => {
 
     function moveLeft(){
         for(let x=0; x < 4; x++){
-            for(let y=0; y < 4; y++){
-                if(squares[x*4 + y].innerHTML != 0){
-                    for(let i=y-1; i >= 0; i--){
+            for(let y=1; y < 4; y++){
+                if(squares[x*4 + y].innerHTML !== 0){
+                    for(let i=0; i < y; i++){
                         if(squares[x*4 + i].innerHTML != 0){
                             if(squares[x*4 + i].innerHTML !== squares[x*4 + y].innerHTML){
                                 if(i !== y-1){

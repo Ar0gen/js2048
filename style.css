@@ -13,10 +13,10 @@ h1 {
     margin: 0 auto;
     position: absolute;
     left: 32%;
-    top: 12%;
+    top: 15%;
 }
 button{
-    border: 2px solid gold;
+    border: 3px solid gold;
     color: black;
     font-size: 22px;
     margin: 4px 2px;
@@ -25,8 +25,7 @@ button{
     position: relative;
     box-shadow: 0px 1px 3px black;
     transition: 0.5s;
-    top: 600px;
-
+    top: 620px;
 }
 
 button:hover{
@@ -40,25 +39,44 @@ button:hover{
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    top:30px;
+    top:10px;
     left: 100px;
     font-size: 24px;
+    width: 200px;
 }
 
 .canvas div{
     width: 110px;
     height: 110px;
-    background-color: burlywood;
     text-align: center;
-    font-size: 16px;
+    line-height: 110px;
+    background-color: rgb(162, 136, 102);
+    text-align: center;
+    font-size: 60px;
     margin: 8px;
     border-radius: 4px;
     font-weight: bold;
+    color: rgba(63, 115, 61, 0.548);
 }
 
 body {
-    background-color: #faf8ef;
+    background-color: #9ab78a;
     display: flex;
     justify-content: center;
     font-family: "Clear Sans", "Helvetica Neue";
 }
+
+#result{
+    position: relative;
+    top:50px;
+    font-size: 24px;
+    left:20px;
+}
+
+
+.container {
+    width: 468px;
+    margin-top: 30px;
+}
+
+
